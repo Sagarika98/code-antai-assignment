@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  #root {
+    overflow-x: hidden;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .dashSpan {
+    @apply h-full w-full flex justify-center items-center flex-col;
+  }
+  .active-right::after {
+    content: "";
+    @apply bg-blue-900 h-full absolute top-0 w-[50%] transition-all rounded-xl z-0 right-0;
+  }
+  .active-left::after {
+    content: "";
+    @apply bg-blue-900 h-full absolute top-0 w-[50%] transition-all rounded-xl z-0 right-1/2;
+  }
+}
+
+@layer utilities {
+  .bg-blue-800 {
+    background-color: #1570ef;
+  }
+  .bg-green-400{
+    background-color:rgb(74 222 128)
+  }
+  /* responsive */
+  .bottom-full {
+    bottom: 100%;
+  }
+  .top-16 {
+    top: 64px;
+  }
+  .opacity-0{
+    opacity:0;
+  }
+  .opacity-100{
+    opacity:1;
+  }
+}
